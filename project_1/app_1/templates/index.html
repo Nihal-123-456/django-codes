@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <h2>{{name}}</h2>
+    <h3>{{age}}</h3>
+    <h4>{{lst}}</h4>
+    <h4>{{course}}</h4>
+    {% if age >= 10 %}
+        <h4>You are old enough</h4>
+    {% else %}
+        <h4>You are little</h4>
+    {% endif %}
+
+    {% for i in course %}
+        <h3>{{i.id}} {{i.name}}</h3>
+    {% endfor %}
+
+    <h2>{{lst | join:" - "}}</h2>
+    <h2>{{ date | date:"D d M Y" }}</h2>
+    <h2>{{ value | length }}</h2>
+    <h2>{{ value | truncatechars:7 }}</h2>
+</body>
+</html>
